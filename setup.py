@@ -8,9 +8,7 @@ setup(
     author=__author__,
     url='https://github.com/xhlulu/pattern-text',
     description='A fork of pattern containing only pattern.text submodule.',
-    packages=find_packages(
-        include=['pattern_text/*']
-    ),
+    packages=find_packages(where='pattern_text', include="*"),
     install_requires=[
         # dependencies here
         'nltk'
