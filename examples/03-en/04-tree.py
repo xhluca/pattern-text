@@ -7,7 +7,7 @@ import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from pattern.en import parse, Text
+from pattern_text.en import parse, Text
 
 # The easiest way to analyze the output of the parser is to create a Text.
 # A Text is a "parse tree" of linked Python objects.

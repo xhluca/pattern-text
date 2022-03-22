@@ -7,8 +7,8 @@ import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from pattern.en import wordnet
-from pattern.en import NOUN, VERB
+from pattern_text.en import wordnet
+from pattern_text.en import NOUN, VERB
 
 # WordNet is a lexical database for the English language.
 # It groups English words into sets of synonyms called synsets, provides short, general definitions,

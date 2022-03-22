@@ -7,7 +7,7 @@ import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from pattern.en import parse, pprint, tag
+from pattern_text.en import parse, pprint, tag
 
 # The en module contains a fast regular expressions-based parser.
 # A parser identifies words in a sentence, word part-of-speech tags (e.g. noun, verb)

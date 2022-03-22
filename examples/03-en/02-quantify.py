@@ -7,7 +7,7 @@ import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from pattern.en import number, numerals, quantify, reflect
+from pattern_text.en import number, numerals, quantify, reflect
 
 # The number() command returns an int or float from a written representation.
 # This is useful, for example, in combination with a parser

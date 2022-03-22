@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 # It is a good idea to study the tagset and its abbreviations for a few minutes.
 
-from pattern.en import parse as parse_en
+from pattern_text.en import parse as parse_en
 print(parse_en("the black cats", chunks=False)) # the/DT black/JJ cat/NNS
 print("")
 
@@ -22,12 +22,12 @@ print("")
 # ... where DT = determiner, JJ = adjective, NN = noun.
 # This is true for all languages that Pattern supports:
 
-from pattern.de import parse as parse_de
-from pattern.es import parse as parse_es
-from pattern.fr import parse as parse_fr
-from pattern.it import parse as parse_it
-from pattern.nl import parse as parse_nl
-from pattern.ru import parse as parse_ru
+from pattern_text.de import parse as parse_de
+from pattern_text.es import parse as parse_es
+from pattern_text.fr import parse as parse_fr
+from pattern_text.it import parse as parse_it
+from pattern_text.nl import parse as parse_nl
+from pattern_text.ru import parse as parse_ru
 
 print(parse_de("die schwarzen Katzen", chunks=False)) # die/DT schwarze/JJ Katzen/NNS
 print(parse_es("los gatos negros", chunks=False))     # los/DT gatos/NNS negros/JJ
@@ -40,9 +40,9 @@ print("")
 # In some cases, this means the original tagset is mapped to Penn Treebank:
 # e.g., for German (STTS), Spanish (PAROLE), Dutch (WOTAN).
 
-from pattern.de import STTS
-from pattern.es import PAROLE
-from pattern.nl import WOTAN
+from pattern_text.de import STTS
+from pattern_text.es import PAROLE
+from pattern_text.nl import WOTAN
 
 print(parse_de("die schwarzen Katzen", chunks=False, tagset=STTS))
 print(parse_es("los gatos negros", chunks=False, tagset=PAROLE))
@@ -61,8 +61,8 @@ print("")
 
 # This simplified tagset will still contain all the information that most users require.
 
-from pattern.text import UNIVERSAL
-from pattern.text import NOUN, VERB, ADJ, ADV, PRON, DET, PREP, NUM, CONJ, INTJ, PRT, PUNC, X
+from pattern_text.text import UNIVERSAL
+from pattern_text.text import NOUN, VERB, ADJ, ADV, PRON, DET, PREP, NUM, CONJ, INTJ, PRT, PUNC, X
 
 # NOUN = "NN" (noun)
 # VERB = "VB" (verb)
@@ -81,7 +81,7 @@ from pattern.text import NOUN, VERB, ADJ, ADV, PRON, DET, PREP, NUM, CONJ, INTJ,
 # We can combine this with the multilingual pattern.text.parse() function,
 # when we need to deal with code that handles many languages at once:
 
-from pattern.text import parse
+from pattern_text.text import parse
 
 print(parse("die schwarzen Katzen", chunks=False, language="de", tagset=UNIVERSAL))
 print(parse("the black cats", chunks=False, language="en", tagset=UNIVERSAL))
@@ -98,7 +98,7 @@ print("")
 # or wonder why the Italian "che" is tagged "PRP", "IN" or "CC"
 # (in the universal tagset it is a PRON or a CONJ).
 
-from pattern.text import parsetree
+from pattern_text.text import parsetree
 
 for sentence in parsetree("i gatti neri che sono la mia", language="it", tagset=UNIVERSAL):
     for word in sentence.words:
@@ -109,7 +109,7 @@ for sentence in parsetree("i gatti neri che sono la mia", language="it", tagset=
 # It returns a (language code, confidence)-tuple.
 # It can guess en, es, de, fr, it, nl.
 
-from pattern.text import language
+from pattern_text.text import language
 
 print("")
 print(language("the cat sat on the mat"))             # ("en", 1.00)

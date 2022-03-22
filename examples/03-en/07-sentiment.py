@@ -7,7 +7,7 @@ import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from pattern.en import sentiment, polarity, subjectivity, positive
+from pattern_text.en import sentiment, polarity, subjectivity, positive
 
 # Sentiment analysis (or opinion mining) attempts to determine if
 # a text is objective or subjective, positive or negative.
@@ -75,7 +75,7 @@ for chunk, polarity, subjectivity, label in sentiment(s).assessments:
 # He or she might be using sarcasm.
 # We could work this out from the fine-grained analysis.
 
-from pattern.metrics import avg
+from pattern_text.metrics import avg
 
 a = sentiment(s).assessments
 

@@ -7,11 +7,11 @@ import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from pattern.en import article, referenced
-from pattern.en import pluralize, singularize
-from pattern.en import comparative, superlative
-from pattern.en import conjugate, lemma, lexeme, tenses
-from pattern.en import NOUN, VERB, ADJECTIVE
+from pattern_text.en import article, referenced
+from pattern_text.en import pluralize, singularize
+from pattern_text.en import comparative, superlative
+from pattern_text.en import conjugate, lemma, lexeme, tenses
+from pattern_text.en import NOUN, VERB, ADJECTIVE
 
 # The en module has a range of tools for word inflection:
 # guessing the indefinite article of a word (a/an?),
@@ -77,7 +77,7 @@ print("")
 # - aspect: IMPERFECTIVE, PROGRESSIVE.
 # The tense can also be given as an abbreviated alias, e.g.,
 # inf, 1sg, 2sg, 3sg, pl, part, 1sgp, 2sgp, 3sgp, ppl, ppart.
-from pattern.en import PRESENT, SINGULAR
+from pattern_text.en import PRESENT, SINGULAR
 print(conjugate("being", tense=PRESENT, person=1, number=SINGULAR, negated=False))
 print(conjugate("being", tense="1sg", negated=False))
 print("")
@@ -89,7 +89,7 @@ print("")
 # For example: tenses("are") => [('present', 2, 'plural', 'indicative', 'imperfective'), ...]
 # You can then check if a tense constant is in the list.
 # This will also work with aliases, even though they are not explicitly in the list.
-from pattern.en import PRESENT, PLURAL
+from pattern_text.en import PRESENT, PLURAL
 print(tenses("are"))
 print((PRESENT, 1, PLURAL) in tenses("are"))
 print("pl" in tenses("are"))
