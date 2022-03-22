@@ -2,7 +2,7 @@
 
 This is a fork of [pattern](https://github.com/clips/pattern), because the original library is not compatible with Python 3.7. 
 
-This directly copies the `pattern.text` submodule without modification (except to `__init__.py` and renaming imports to `pattern_text`). You can use it as a drop-in replacement for `pattern.text` in the original library with any python version (including 3.7+). This is meant as a temporary measure before `pattern.text` is updated in a future release.
+This directly copies the `pattern.text` submodule with only minor modifications (Fixing `StopIteration` issues, adding `MANIFEST.in`, renaming imports to `pattern_text`). You can use it as a drop-in replacement for `pattern.text` in the original library with any python version (including 3.7+). This is meant as a temporary measure before `pattern.text` is updated in a future release.
 
 ### Installation:
 
