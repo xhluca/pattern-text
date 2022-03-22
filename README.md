@@ -1,3 +1,11 @@
+# Pattern-text: A fork of pattern containing only the pattern.text submodule
+
+This is a fork of pattern, because the original library is not compatible with Python 3.7. 
+
+This directly copies the `pattern.text` submodule without modification (except to `__init__.py` and renaming imports to `pattern_text`). You can use it as a drop-in replacement for `pattern.text` in the original library.
+
+-----
+
 Pattern
 =======
 
