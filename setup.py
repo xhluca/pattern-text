@@ -9,7 +9,6 @@ setup(
     url='https://github.com/xhlulu/pattern-text',
     description='A fork of pattern containing only pattern.text submodule.',
     packages=find_packages(
-        where='pattern_text',
         include=['pattern_text', 'pattern_text.*']
     ),
     install_requires=[
