@@ -609,7 +609,7 @@ def _read(path, encoding="utf-8", comment=";;;"):
                 yield line
             except StopIteration:
                 return
-    raise StopIteration
+    # raise StopIteration
 
 
 class Lexicon(lazydict):
