@@ -1,2 +1,0 @@
-recursive-include pattern_text *.*
-recursive-exclude pattern_text *.pyc
