@@ -1,9 +1,32 @@
 # Pattern-text: A fork of pattern containing only the pattern.text submodule
 
-This is a fork of pattern, because the original library is not compatible with Python 3.7. 
+This is a fork of [pattern](https://github.com/clips/pattern), because the original library is not compatible with Python 3.7. 
 
-This directly copies the `pattern.text` submodule without modification (except to `__init__.py` and renaming imports to `pattern_text`). You can use it as a drop-in replacement for `pattern.text` in the original library.
+This directly copies the `pattern.text` submodule without modification (except to `__init__.py` and renaming imports to `pattern_text`). You can use it as a drop-in replacement for `pattern.text` in the original library with any python version (including 3.7+). This is meant as a temporary measure before `pattern.text` is updated in a future release.
 
+### Installation:
+
+```bash
+# Install latest version on main
+pip install https://github.com/xhlulu/pattern-text
+
+# Install specific version, e.g. v0.0.1
+pip install https://github.com/xhlulu/pattern-text@v0.0.1
+```
+
+The version starts at v0.0.1 in order to differentiate it from the original library. I did not publish on PyPi because this is not my library, so do NOT attempt `pip install pattern-text`!
+
+### Usage:
+
+```python
+# Instead of: 
+# >>> from pattern import en
+# Do this:
+from pattern_text import en
+```
+
+
+*Everything above was added as part of the fork. You can find below the original readme:*
 -----
 
 Pattern
