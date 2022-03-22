@@ -10,8 +10,8 @@ This directly copies the `pattern.text` submodule without modification (except t
 # Install latest version on main
 pip install git+https://github.com/xhlulu/pattern-text
 
-# Install specific version, e.g. v0.0.1
-pip install git+https://github.com/xhlulu/pattern-text@v0.0.1
+# Install specific version, e.g. v0.0.3
+pip install git+https://github.com/xhlulu/pattern-text@v0.0.3
 ```
 
 The version starts at v0.0.1 in order to differentiate it from the original library. I did not publish on PyPi because this is not my library, so do NOT attempt `pip install pattern-text`!
