@@ -28,5 +28,6 @@ setup(
     extras_require={
         # For special installation, e.g. pip install simple-pip-example[dev]
         'dev': ['black']
-    }
+    },
+    include_package_data=True
 )
