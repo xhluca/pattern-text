@@ -10,9 +10,11 @@ setup(
     description='A fork of pattern containing only pattern.text submodule.',
     packages=find_packages(
         where='pattern_text',
+        include=['pattern_text', 'pattern_text.*']
     ),
     install_requires=[
         # dependencies here
+        'nltk'
     ],
     extras_require={
         # For special installation, e.g. pip install simple-pip-example[dev]
